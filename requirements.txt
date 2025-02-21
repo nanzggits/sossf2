@@ -1,0 +1,5 @@
+```
+Flask==1.1.1  # Outdated version, should be updated
+requests==2.22.0  # Outdated version, should be updated
+sqlalchemy==1.3.0  # Outdated version, should be updated
+```
