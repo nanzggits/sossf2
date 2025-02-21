@@ -1,4 +1,4 @@
-# # Secure Open Source Training Repository
+# Secure Open Source Training Repository
 
 ## Repository Overview
 This repository is designed for hands-on exercises to learn how to secure open-source projects. It contains:
