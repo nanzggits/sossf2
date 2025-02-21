@@ -1,14 +1,15 @@
-name: CodeQL Analysis
+name: "CodeQL Analysis"
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   pull_request:
-    branches:
-      - main
+    branches: [ main ]
   schedule:
     - cron: '0 12 * * 1'  # Runs every Monday at 12:00 UTC
+
+permissions:
+  security-events: write  # Required for CodeQL to access security API
 
 jobs:
   analyze:
@@ -17,12 +18,12 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Initialize CodeQL
-        uses: github/codeql-action/init@v2
+        uses: github/codeql-action/init@v3
         with:
           languages: python
 
       - name: Perform CodeQL Analysis
-        uses: github/codeql-action/analyze@v2
+        uses: github/codeql-action/analyze@v3
