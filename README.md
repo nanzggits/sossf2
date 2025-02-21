@@ -9,8 +9,11 @@ This repository is designed for hands-on exercises to learn how to secure open-s
 - **No branch protection rules** (so learners can enable them manually)
 
 ---
-
 ## Hands-on Exercises
+1. **Follow each exercise** step by step.
+2. **Fix issues** flagged by GitHub security tools.
+
+Happy Securing! 🔒
 
 ### 1. Detecting and Rotating Secrets (Secret Scanning)
 #### Steps:
@@ -75,10 +78,4 @@ This repository is designed for hands-on exercises to learn how to secure open-s
 │   ├── workflows/
 │   │   ├── codeql-analysis.yml  # GitHub Actions for CodeQL scanning
 ```
-## Next Steps
-1. **Follow each exercise** step by step.
-2. **Fix issues** flagged by GitHub security tools.
-
-Happy Securing! 🔒
-
 ---
