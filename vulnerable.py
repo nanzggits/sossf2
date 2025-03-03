@@ -1,4 +1,3 @@
-```python
 import sqlite3
 import pickle
 import sys
@@ -19,4 +18,3 @@ def load_user_preferences(file_path):
 if __name__ == "__main__":
     user_id = sys.argv[1]
     print(get_user_info(user_id))
-```
