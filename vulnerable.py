@@ -1,22 +1,10 @@
-```python
 import sqlite3
-import pickle
-import sys
+from flask import request
 
-# SQL Injection vulnerability
-def get_user_info(user_id):
-    conn = sqlite3.connect("users.db")
-    cursor = conn.cursor()
-    query = f"SELECT * FROM users WHERE id = {user_id}"  # Vulnerable to SQL injection
+def get_user_data():
+    user_input = request.args.get('username')
+    query = "SELECT * FROM users WHERE username = '" + user_input + "'"  # 🚨 SQL Injection vulnerability!
+    connection = sqlite3.connect("users.db")
+    cursor = connection.cursor()
     cursor.execute(query)
     return cursor.fetchall()
-
-# Unsafe deserialization vulnerability
-def load_user_preferences(file_path):
-    with open(file_path, "rb") as file:
-        return pickle.load(file)  # Unsafe: Can execute arbitrary code
-
-if __name__ == "__main__":
-    user_id = sys.argv[1]
-    print(get_user_info(user_id))
-```
