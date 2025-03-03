@@ -1,4 +1,2 @@
-```python
-# Hardcoded secret for testing GitHub Secret Scanning
-auth_token = "sk_test_4eC39HqLyjWDarjtT1zdp7dc"
-```
+# Configuration file with intentionally hardcoded API key for testing
+API_KEY = "sk_live_1234567890abcdef"
